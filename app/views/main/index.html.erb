@@ -1,0 +1,22 @@
+<form action="/main/add" >
+<textarea name="input" class="newNote"></textarea>
+<button type="submit">Save New Note</button>
+</form>
+
+<script>
+    console.log("this works")
+</script>
+
+<span class="sortable">
+<% @notes.each do |note| %>
+<div>
+<form action="/main/delete/<%=note.id%>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+    <button class="delete" data-confirm="Delete Stickynote?">X</button>
+</form>
+<%= note.body %>
+</div>
+
+<%end%> 
+</span>
+

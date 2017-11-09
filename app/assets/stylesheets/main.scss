@@ -1,0 +1,24 @@
+// Place all the styles related to the Main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+div{
+    vertical-align: top;
+    display: inline-block;
+    background-color: rgba(245, 245, 12, 0.831) ;
+    width: 250px;
+    height: 250px;
+    margin: 10px 10px; 
+    padding: 10px;
+    box-shadow: 10px 10px 5px gray;
+}
+
+.delete{
+    float: right;
+}
+
+.newNote{
+    height: 100px;
+    width: 250px;
+}
