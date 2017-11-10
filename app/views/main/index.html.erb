@@ -9,7 +9,7 @@
 
 <span class="sortable">
 <% @notes.each do |note| %>
-<div>
+<div id="<%= note.id%>">
 <form action="/main/delete/<%=note.id%>" method="POST">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
     <button class="delete" data-confirm="Delete Stickynote?">X</button>

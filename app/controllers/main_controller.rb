@@ -1,6 +1,6 @@
 class MainController < ApplicationController
   def index
-    @notes = Note.all
+    @notes = Note.order("[order]")
   end
 
   def add
@@ -29,5 +29,14 @@ class MainController < ApplicationController
   end
 
   def updatePos
+    arr = params[:sort_array]
+    sortnumber = 0
+    arr.each do |id|
+      note = Note.find(id)
+      note.order = sortnumber
+      sortnumber = sortnumber+1
+      note.save
+    end
+    render :text => "hi"
   end
 end
